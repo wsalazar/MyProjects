@@ -1,0 +1,5 @@
+C:\Users\owner\AppData\Local\Temporary Projects\CustomerBankAccount\bin\Release\CustomerBankAccount.exe
+C:\Users\owner\AppData\Local\Temporary Projects\CustomerBankAccount\bin\Release\CustomerBankAccount.pdb
+C:\Users\owner\AppData\Local\Temporary Projects\CustomerBankAccount\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\owner\AppData\Local\Temporary Projects\CustomerBankAccount\obj\x86\Release\CustomerBankAccount.exe
+C:\Users\owner\AppData\Local\Temporary Projects\CustomerBankAccount\obj\x86\Release\CustomerBankAccount.pdb
