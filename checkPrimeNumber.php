@@ -10,8 +10,9 @@ class checkPrimeNumber
 			return true;
 		else if ($prime % 2 == 0)
 			return false;
-		//echo sqrt($prime);
+		
 		$sqrt = (int)(sqrt($prime))+1;
+		
 		for ($num = 3; $num < $sqrt; $num++)
 		{
 			if ($prime % $num == 0)
@@ -36,7 +37,7 @@ class checkPrimeNumber
 				$Target = $prime;
 				
 				if ($counter == $_POST['prime'])
-					echo "This is the ".$_POST['prime']. " prime number is ".$Target. "<br/>";
+					echo "Prime number ".$_POST['prime']. " is ".$Target. ".<br/>";
 			}
 			$prime++;			
 		}		
