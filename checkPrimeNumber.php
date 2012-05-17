@@ -28,7 +28,6 @@ class checkPrimeNumber
 		$prime = 1;
 		$counter = 0;
 		while ($counter <= $_POST['prime'])
-		//for($counter = 1; $counter <= 10002; $counter++)
 		{						
 			if($this->checkPrime($prime))	
 			{
@@ -47,6 +46,4 @@ class checkPrimeNumber
 }
 
 $primeNumber = new checkPrimeNumber();
-//$primeNumber -> checkPrime();
-
 ?>
