@@ -1,0 +1,5 @@
+C:\Users\owner\AppData\Local\Temporary Projects\ArrayExpenseReport\bin\Release\ArrayExpenseReport.exe
+C:\Users\owner\AppData\Local\Temporary Projects\ArrayExpenseReport\bin\Release\ArrayExpenseReport.pdb
+C:\Users\owner\AppData\Local\Temporary Projects\ArrayExpenseReport\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\owner\AppData\Local\Temporary Projects\ArrayExpenseReport\obj\x86\Release\ArrayExpenseReport.exe
+C:\Users\owner\AppData\Local\Temporary Projects\ArrayExpenseReport\obj\x86\Release\ArrayExpenseReport.pdb

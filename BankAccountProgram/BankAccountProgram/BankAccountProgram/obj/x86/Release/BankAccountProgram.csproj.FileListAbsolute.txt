@@ -1,0 +1,5 @@
+C:\Users\owner\AppData\Local\Temporary Projects\BankAccountProgram\bin\Release\BankAccountProgram.exe
+C:\Users\owner\AppData\Local\Temporary Projects\BankAccountProgram\bin\Release\BankAccountProgram.pdb
+C:\Users\owner\AppData\Local\Temporary Projects\BankAccountProgram\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\owner\AppData\Local\Temporary Projects\BankAccountProgram\obj\x86\Release\BankAccountProgram.exe
+C:\Users\owner\AppData\Local\Temporary Projects\BankAccountProgram\obj\x86\Release\BankAccountProgram.pdb
