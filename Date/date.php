@@ -1,33 +1,13 @@
 <?php
 	$date = $_REQUEST['date'];
 	$msg = '';
-
-	$yr = explode('-',$date);	
+	$yr = explode('-',$date);
 	if(strlen($yr[0])== 4){
 		$year = $yr[0];
 	}
 	else if (strlen($yr[2])==4){
 		$year = $yr[2];		
 	}	
-	/*
-	$yr = substr($date,0,-6);
-	$month = substr($date,0,-3);
-	$month = substr($month,5);
-	$day = substr($date,8);
-
-	$format1 = $yr.'-'.$month.'-'.$day;
-	$format2 = $month.'-'.$day.'-'.$yr;
-	
-	if($date == $format1){
-		$year = substr($date,0,4);
-	}
-	else if ($date==$format2){
-		$year = substr($date,-4);
-	}
-	else{ 
-		$msg = "Format is incorrect";
-	}
-	*/
 ?>
 <!DOCTYPE>
 <html>
