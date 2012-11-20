@@ -15,11 +15,7 @@
 <meta>
 <title>Date</title>
 </head>
-<body>
-	<?php
-	if($msg!='')
-		echo $msg;
-	?>
+<body>	
 <form>
 
 	Date: <input type="text" name="date"><br />
