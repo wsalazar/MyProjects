@@ -1,4 +1,5 @@
 <?php
+session_start();
 define('LOCAL_HOST','localhost');
 define('USERNAME','root');
 define('DB_NAME','picture_upload');
@@ -8,6 +9,8 @@ if(!$connect)
 $dbSelected = mysql_select_db(DB_NAME,$connect);
 if(!$dbSelected)
 	die('Can not connect to database'.mysql_error());
-ini_set ("display_errors", "1")
+ini_set ("display_errors", "1");
+error_reporting (E_ALL ^ E_NOTICE);
+//mysql_close($connect);
 ?>
 
