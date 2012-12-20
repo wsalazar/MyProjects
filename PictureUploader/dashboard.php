@@ -1,9 +1,14 @@
 <?php
-require_once('config.php');
-if(!isset($_SESSION['login']) || $_SESSION['login'] !== true){
+session_start();
+/*if(!isset($_SESSION['login']) || $_SESSION['login'] !== true){
 	header("Location: login.php");
 	exit;
 }
+*/
+require 'LoginUser.php';
+$login = new LoginUser();
+if($login->isLogged())
+	$login->welcomeScreen();
 ?>
 
 <!DOCTYPE>

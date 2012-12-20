@@ -2,7 +2,7 @@
 require_once('config.php');
 session_start();
 $id = $_SESSION['id'];
-if(@$_POST['submit']){
+if(isset($_POST['submit'])){
 	$file = $_FILES['pic']['name'];
 	//$fileSize = filesize($file);
 	//echo $fileSize;

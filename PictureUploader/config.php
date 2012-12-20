@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 define('LOCAL_HOST','localhost');
 define('USERNAME','root');
 define('DB_NAME','picture_upload');
