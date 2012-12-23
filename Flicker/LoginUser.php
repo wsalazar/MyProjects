@@ -25,21 +25,32 @@ class LoginUser{
   public function sendMail(){
     require_once 'Mail.php';
     require_once 'mail.php';
+    //var_dump($smtp['host']);
+    //var_dump(fsockopen($smtp['host']));
+    //die();
     $to = $this->email;
     $subject = 'New Password Generator';
     //$headers = 'From: will.a.salazar@gmail.com';
     $from = 'will.a.salazar@gmail.com';
-    $message = 'Hello Dolly,<br />This is just a test I am doing for my flickr thing.<br />';
-    $message .= 'By the way your new password for my application since you need to log in is '.$this->randomPass;
+    $message = 'Hello Dolly,\nThis is just a test I am doing for my flickr thing.\n';
+    $message .= 'By the way your new password for my application since you need to log in is '.$this->randomPass.'.';
     $headers = array(
       'From'    =>  $from,
       'To'      =>  $to,
       'Subject' =>  $message
       );
     $smtpMail = Mail::factory('smtp', $smtp);
-    $mail = $smtp->send($to,$headers,$message);
-    if(PEAR::isError($mail))
+    //var_dump(is_a($smtpMail,'Mail_smtp'));
+    //die();
+//    var_dump($smtpMail->send($to,$headers,$message));
+    $mail = $smtpMail->send($to,$headers,$message);
+    //var_dump($mail);
+  //  die();
+    if(PEAR::isError($mail)){
       echo '<p>'.$mail->getMessage().'</p>';
+    //  echo "hello";
+     // die();
+    }
     else
       return true;
     
