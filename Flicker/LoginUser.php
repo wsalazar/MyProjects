@@ -25,36 +25,25 @@ class LoginUser{
   public function sendMail(){
     require_once 'Mail.php';
     require_once 'mail.php';
-    //var_dump($smtp['host']);
-    //var_dump(fsockopen($smtp['host']));
-    //die();
     $to = $this->email;
     $subject = 'New Password Generator';
-    //$headers = 'From: will.a.salazar@gmail.com';
     $from = 'will.a.salazar@gmail.com';
-    $message = 'Hello Dolly,\nThis is just a test I am doing for my flickr thing.\n';
+    $message = 'Hello Dolly,'."\r\n".'This is just a test I am doing for my flickr thing.'."\r\n";
     $message .= 'By the way your new password for my application since you need to log in is '.$this->randomPass.'.';
     $headers = array(
       'From'    =>  $from,
       'To'      =>  $to,
-      'Subject' =>  $message
+      'Subject' =>  $subject,
+      'CC'      =>  $from
       );
     $smtpMail = Mail::factory('smtp', $smtp);
-    //var_dump(is_a($smtpMail,'Mail_smtp'));
-    //die();
-//    var_dump($smtpMail->send($to,$headers,$message));
     $mail = $smtpMail->send($to,$headers,$message);
-    //var_dump($mail);
-  //  die();
     if(PEAR::isError($mail)){
       echo '<p>'.$mail->getMessage().'</p>';
-    //  echo "hello";
-     // die();
     }
     else
       return true;
     
-    //return mail($to, $subject, $message, $headers);
   }
   
   public function generateRandom($num){
