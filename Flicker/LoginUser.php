@@ -10,7 +10,6 @@ class LoginUser{
     $this->email = isset($_POST['email'])?$_POST['email']:'';
     $this->password = isset($_POST['pass'])?$_POST['pass']:'';
     $this->userSession();
-
   }
 
   public function forgotPassword($num){
