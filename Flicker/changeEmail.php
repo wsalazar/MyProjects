@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['submit'])){
-  require 'ChangeUser.php';
-  $change = new ChangeUser();
+  require 'ChangeCredentials.php';
+  $change = new ChangeCredentials();
   if($change->changeEmail()){
     header("location: dashboard.php");
   }
@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
     <title>Change Email</title>
     <script type="text/javascript">
       function Confirm(){
-        var email = document.getElementById('email');        
+        var email = document.getElementById('email');
         if(!email.value)
           alert("Fields can not be blank");
       }

@@ -26,8 +26,7 @@ session_start();
       <a href ="view.php">view all users</a>
       <a href ="upload.php">upload</a>
       <a href ="logoff.php">logoff</a>
-      <a href ="changepassword.php">change password</a>
-      <a href ="changeEmail.php">change email</a>
+      <a href ="changeCredentials.php">change credentials</a>
     </nav>
     <?php }else{?>
     <h1>Dashboard</h1>
@@ -37,7 +36,7 @@ session_start();
       <a href ="view.php">view</a>
       <a href ="upload.php">upload</a>
       <a href ="logoff.php">logoff</a>
-      <a href ="changepassword.php">change password</a>
+      <a href ="changeCredentials.php">change credentials</a>
     </nav>
      <?php }?>
   </body>

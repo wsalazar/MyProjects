@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['submit'])){
-  require 'ChangeUser.php';
-  $change = new ChangeUser();
+  require 'ChangeCredentials.php';
+  $change = new ChangeCredentials();
   if($change->validation()){
     header("location: dashboard.php");
   }
