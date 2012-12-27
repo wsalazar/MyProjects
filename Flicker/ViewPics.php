@@ -16,6 +16,7 @@ class ViewPics{
     $this->delete = array();
     //$this->pid = array();
     $this->id = $_SESSION['id'];
+    //echo $this->id;
     $this->location = 'pics/';
     $this->delete = $delete;
     $this->adminEmail = isset($_POST['userEmail'])?$_POST['userEmail']:'';
@@ -63,9 +64,10 @@ class ViewPics{
   public function retrieveImages(){
     //echo $this->access;
     require 'index.php';
-    if(isset($this->email)){
-       $select = "SELECT * from user_pic where email = '$this->email'";
-      echo $select;
+    if(isset($this->adminEmail)){
+       $select = "SELECT * from user where email = '$this->adminEmail'";
+
+      //echo $select;
       $results = mysql_query($select);
       //var_dump($results);
       $num = mysql_num_rows($results);
@@ -73,14 +75,20 @@ class ViewPics{
       $this->number = $num;
       //if($num > 0){
       while($row = mysql_fetch_assoc($results)){
-        $this->image[] = $this->location.$row['pic_name'];
+        $id = $row['id'];
+        $selectUserPics = "SELECT * from user_pic where id = $id";
+        //echo $selectUserPics;
+        //die();
+        $resultUserPics = mysql_query($selectUserPics);
+        $rowUsePics = mysql_fetch_assoc($resultUserPics);
+        $this->image[] = $this->location.$rowUsePics['pic_name'];
       }
 
       return $this->image;
     }
     else if($this->access){
-      
-      $select = "SELECT * from user_pic where id = $this->id";
+      //echo $this->access;
+      $select = "SELECT * from user_pic";
       //echo $select;
       $results = mysql_query($select);
       //var_dump($results);
@@ -95,7 +103,7 @@ class ViewPics{
       return $this->image;
     }
     else{
-      $select = "SELECT * from user_pic";
+      $select = "SELECT * from user_pic where id = $this->id";
       //echo $select;
       $results = mysql_query($select);
       //var_dump($results);

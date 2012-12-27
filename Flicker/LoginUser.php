@@ -27,8 +27,8 @@ class LoginUser{
     $to = $this->email;
     $subject = 'New Password Generator';
     $from = 'will.a.salazar@gmail.com';
-    $message = 'Hello Dolly,'."\r\n".'This is just a test I am doing for my flickr thing.'."\r\n";
-    $message .= 'By the way your new password for my application since you need to log in is '.$this->randomPass.'.';
+    $message = 'Hello $this->email,'."\r\n";
+    $message .= 'Your new password is '.$this->randomPass.'.';
     $headers = array(
       'From'    =>  $from,
       'To'      =>  $to,
@@ -96,6 +96,8 @@ class LoginUser{
     require 'index.php';
     $select = "SELECT * from user where email = '$this->email' and pass = '$this->password'";
     //echo $select;
+    //echo $select;
+    //die();
     $results = mysql_query($select);
     if(mysql_num_rows($results)==0)
       $this->errors[] = "Invalid email/password";

@@ -48,7 +48,7 @@ while($row = mysql_fetch_assoc($results)){
    </nav>
       <form method="post"  action="<?=$_SERVER['PHP_SELF']?>">
         <?php
-    if($access == 0){?>
+    if($access == 1){?>
           What user email would you like to view pictures of: <input type="text" name="userEmail">
           <input type="submit" name="adminSubmit" value="submit"><br />
           <?php 
