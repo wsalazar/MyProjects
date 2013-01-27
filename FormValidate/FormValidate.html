@@ -5,19 +5,14 @@
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
   <script>
-function validateFields(){
-	$(document).ready(function(){
+$(document).ready(function(){
 		$("#commentForm").validate();	
-	});
-}
- // $(document).ready(function(){
- //     });
+});
   </script>
   
 </head>
 <body>
   
-
  <form class="cmxform" id="commentForm" method="get" action="">
    <p>
      Name
@@ -36,7 +31,7 @@ function validateFields(){
     *<textarea name="comment" cols="22" class="required"  ></textarea>
    </p>
    <p>
-	<button type="button" onclick="validateFields()">Submit</button>
+	<input type="submit" value="Submit"/>
    </p>
  </form>
 </body>
