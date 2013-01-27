@@ -2,12 +2,14 @@
                     "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
   <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
   <script>
-function validateFields(){
-		$("#commentForm").validate();	
-}
+	$(document).ready(function(){
+		$('#buttonClick').click(function(){
+			$("#commentForm").validate().form();
+		})
+	});
   </script>
   
 </head>
@@ -31,7 +33,7 @@ function validateFields(){
     *<textarea name="comment" cols="22" class="required"  ></textarea>
    </p>
    <p>
-	<input type="submit" value="Submit"/>
+	<button id="buttonClick" type="button">Submit</button>
    </p>
  </form>
 </body>
