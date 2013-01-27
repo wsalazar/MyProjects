@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+                    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+  <script>
+function validateFields(){
+	$(document).ready(function(){
+		$("#commentForm").validate();	
+	});
+}
+ // $(document).ready(function(){
+ //     });
+  </script>
+  
+</head>
+<body>
+  
+
+ <form class="cmxform" id="commentForm" method="get" action="">
+   <p>
+     Name
+     *<input class="required" />
+   </p>
+   <p>
+     E-Mail
+     *<input name="email" size="25" class="required email" />
+   </p>
+   <p>
+    URL
+     *<input name="url" size="25" class="required" value="" />
+   </p>
+   <p>
+     Your comment
+    *<textarea name="comment" cols="22" class="required"  ></textarea>
+   </p>
+   <p>
+	<button type="button" onclick="validateFields()">Submit</button>
+   </p>
+ </form>
+</body>
+</html>
+
