@@ -1,0 +1,7 @@
+This project started out with me writing a PHP script to get the response headers from a web site that was not on a LAMP Stack but on an IIS Server. The directory had tons and tons of file with asp, aspx, html, and htm files. In my script I basically made an HTTP Request and Received the Response Header and redirected the URI, URL, and the Response Code to a CSV File.
+
+I then made a shell script that read a column from that CSV file and matched it in over 50 access logs files and took at count of how many times the URI was hit in each log file. Then it took a cumulative count and redirected the URI, the Log file, number of hits in each log file, and the total hits in all logs files into a txt file and csv file. This shell script ran for months due to how many records appeared in the original CSV file and how many log files there were.
+
+I then used Doctrine2 to read from a text file and wrote to a table and then another CSV file.
+
+The reasoning behind this whole process is because I needed to get rid of Legacy Technology but didn't know which files gave a 200, 3xx, 4xx, or 5xx Response Code. From the files that did give a 200 I didn't know when the last time they were hit which is where the access files came into play.
