@@ -78,7 +78,7 @@ class CSVWriter
 	protected $Log6;
 
 	/*
-	 *@Description: This constructor is used so that a new instance can not be created from anywhere.
+	 *Singleton contructor is made private so that only one instance can be used for this class.
 	 */
 	private function __construct(){}
 
